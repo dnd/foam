@@ -1,0 +1,55 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{A75C8031-827D-42D6-9867-3C6080402C56}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>Foam</AssemblyName>
+    <OutputPath>./bin/Debug/</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>
+    </DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>Foam</AssemblyName>
+    <OutputPath>./bin/Release/</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>
+    </DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="./AssemblyInfo.cs" />
+    <Compile Include="./frmFoam.cs" />
+    <Compile Include="./frmSP.cs" />
+    <Compile Include="./SQLXML.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="./frmFoam.resx">
+      <LogicalName>Foam.frmFoam.resources</LogicalName>
+      <DependentUpon>frmFoam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="./frmSP.resx">
+      <LogicalName>Foam.frmSP.resources</LogicalName>
+      <DependentUpon>frmSP.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+</Project>

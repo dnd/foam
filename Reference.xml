@@ -1,0 +1,7 @@
+﻿<TestXML>
+	<CustomerName>(SELECT Name FROM tblCustomers)</CustomerName>
+	<OrderNumber>9</OrderNumber>
+	<OrderLines TotalLines="SELECT COUNT(*) FROM tblOrderLines">
+		<OrderLine>Cheese</OrderLine>
+	</OrderLines>
+</TestXML>

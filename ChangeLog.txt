@@ -1,0 +1,29 @@
+----------- ChangeLog.txt ------------
+Application Name: Foam.exe
+Developer: digital nothing design
+Current Version: 1.1.0
+Download Latest Version: http://www.digitalnothing.com/Downloads/Tools/Foam.zip
+
+========================================================================================================
+08/29/2002 - v1.1.2
+	Fixed PopulateComboBoxes() to check that the tmpPath is not an empty string prior to parsing.
+
+========================================================================================================
+08/04/2002 - v1.1.0
+	Added "New Procedure" button to clear out all fields and have a fresh slate for a new XML file.
+	
+	"Parse XML" will now prompt the user when clicked, asking if the user would like to clear out all 
+	fields, essentially creating a new procedure. If the user responds "No" then the existing data will 
+	be kept, but drop down options for ORDER BY and Constraint Clauses will be repopulated. The prompt 
+	will only appear if another document has already been parsed during	the session.
+	
+	When an XML doc path is typed in, or attained using the Browse button, the file will be parsed 
+	automatically.
+	
+========================================================================================================
+08/03/2002 - v1.0.0 
+	Released.
+
+========================================================================================================
+
+"Have some Foam with your SOAP!"

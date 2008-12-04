@@ -1,0 +1,13 @@
+<Company>
+	<Plant>
+		<Building>
+			<Location>
+				<Unit>
+					<PartType>
+						<Part>@Stuff</Part>
+					</PartType>
+				</Unit>
+			</Location>
+		</Building>
+	</Plant>
+</Company>

@@ -1,0 +1,26 @@
+﻿<Ad AdId="@AdID" AdPosted="@PostDate">
+	<Title TitleName="@Title"/>
+	<AdBody>@AdBody</AdBody>
+	<Images ImageCount="SELECT COUNT(*) FROM tblImages WHERE AdID = @AdID">
+		<Image ImageName="@ImageName">
+			<Views>@ViewCount</Views>
+			<Description>@Location</Description>
+		</Image>
+	</Images>
+	<Links>	
+		<Link LinkName="@LinkName">
+			<URL>@URL</URL>
+			<Description>@Description</Description>
+		</Link>
+	</Links>
+	<Stuff>@Stuff</Stuff>
+	<Other>
+		<Description>@Description2</Description>
+		<Errors ErrorCount="@ECount">
+			<Error>
+				<Number>1234</Number>
+				<Description>@ErrorDescription</Description>
+			</Error>
+		</Errors>
+	</Other>
+</Ad>

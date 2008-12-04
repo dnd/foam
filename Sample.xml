@@ -1,0 +1,12 @@
+﻿<Ad AdId="C.ClassifiedID" AdPosted="C.AdPosted">
+	<Title>C.Title</Title>
+	<AdBody>C.AdBody</AdBody>
+	<Poster>CD.FirstName + ' ' + CD.LastName</Poster>
+	<Phone>CD.Phone</Phone>
+	<City>CD.City</City>
+	<State>S.StateName</State>
+	<Country>CD.Country</Country>
+	<Images ImageCount="(SELECT COUNT(*) FROM tblImages WHERE tblImages.ClassifiedID = C.ClassifiedID)">
+		<Image ImageId="I.ImageID" Path="I.Path" ImageName="I.ImageID"></Image>
+	</Images>
+</Ad>

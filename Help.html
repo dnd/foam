@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio 7.0">
+		<TITLE></TITLE>
+	</HEAD>
+	<BODY>
+		<h1>Foam v1.1.2 - Help</h1>
+		<hr>
+		<h2>Table of Contents</h2>
+		<ul>
+			<li>
+				<a href="#About">About Foam</a></li>
+			<li>
+				<a href="#Requirements">Requirements</a></li>
+			<li>
+				<a href="#Formatting">Formatting Your XML File</a></li>
+			<li>
+				<a href="#Use">Using Foam</a></li>
+			<li>
+				<a href="#Development">Development</a></li>
+			<li>
+				<a href="#Resources">FOR XML Resources</a></li>
+		</ul>
+		<hr>
+		<a name="#About"></a>
+		<h2>About Foam</h2>
+		<p>Foam is a .Net Windows application that is used to ease the creation of FOR XML 
+			EXPLICIT queries for use with MS SQL Server 2000. Foam does this by taking an 
+			XML document that you have formatted according to the incredibly simple 
+			structure specified below, and then parsing through the document to create the 
+			appropriate FOR XML EXPLICIT structure. This is the absolute base functionality 
+			of Foam.
+			<BR>
+			<BR>
+			With Foam, you can further specify parameters, constraints(FROM/WHERE clauses), 
+			and ORDER BY criteria. Foam will take the information that it has been given, 
+			and format it, and place it in the appropriate location for the stored 
+			procedure.
+			<br>
+			<br>
+			While Foam cannot hope to cover all the snags of working with FOR XML EXPLICIT, 
+			it does have some rules built in to create the procedure structure as 
+			accurately as possible to minimize errors. The more information you provide 
+			Foam with, the less chance of errors and need for debugging there will be at 
+			the end.
+		</p>
+		<br>
+		<a name="#Requirements"></a>
+		<h2>Requirements</h2>
+		<p>Foam requires that you have the Microsoft.Net Framework installed, and a 
+			resolution display of at least 800x600.
+			<ul>
+				<li>
+					Download the .Net Framework: <a href="http://www.digitalnothing.com/downloads/tools/dotnetfx.exe">
+						dotnetfx.exe</a></li>
+			</ul>
+		</p>
+		<br>
+		<a name="#Formatting"></a>
+		<h2>Formatting your XML File</h2>
+		<p>Formatting an XML file for Foam is so simple a monkey could do it(well maybe if 
+			you had an infinite number of monkeys...)! To format an XML document for use 
+			with Foam, create the XML structure that you would like for your end output. 
+			Instead of placing actual data values in for attributes and elements, just 
+			place in the column, string, expression, etc... that you would like to have SQL 
+			Server use as the value. Look at the Sample.xml file that came with the 
+			Foam.zip file for an example of how to format your document.</p>
+		<br>
+		<a name="#Use"></a>
+		<h2>Using Foam</h2>
+		<p>First you will need to either type in or use the Browse button to locate the 
+			path to the XML document you wish to parse. After you have chosen the file you 
+			want to parse, you can specify the name you would like to use for the stored 
+			procedure.<br>
+			<br>
+			In the Parameters section you can add, edit, and remove parameters for the 
+			stored procedure. To add a parameter, specify a name, data type, and a length 
+			if necessary(no parentheses). Click Add / Edit when you are done. To edit a 
+			parameter click on that parameter's line in the parameters list. You may then 
+			change the data type, or length and click Add / Edit to save the changes. To 
+			remove, select the parameter you wish to remove from the list and click Remove.
+			<BR>
+			<BR>
+			The above are the sections you can fill out before parsing the document you 
+			have selected. To make the ORDER BY, and Constraint Clauses groups available, 
+			you will need to click the Parse XML button. If the parsing of your document is 
+			successful, you will receive a message saying that parsing was successful. If 
+			the parsing failed, you will receive a failure message. A failure message 
+			indicates that the way you have formatted your document is not in line with 
+			what Foam was expecting. Please compare your document with Sample.xml as a 
+			reference.<br>
+			<br>
+			To add ORDER BY criteria to the procedure, select the path to the tag you wish 
+			to order by from the drop down, specify whether it should be ascending or 
+			descending, and click Add. To edit, or remove, follow the same pattern as 
+			described in the Parameters use information. You can move ordered fields up or 
+			down in the list to get the appropriate location for a field even if it was 
+			added at a later time. To do this, click on the field you want to change, and 
+			use the up or down arrow buttons to move the field. It is recommended that you 
+			add ORDER BY criteria for your procedure, this is because of the necessity to 
+			have the column being ordered by SELECTed in all UNIONs. For more information 
+			on how FOR XML EXPLICIT and ORDERing work you can read this article: 
+			http://www.sqlxml.org/faqs.aspx?faq=28<br>
+			<br>
+			To add Constraint Clauses(FROM/WHERE) choose the SELECT block from the drop 
+			down that the constraint will be attached to, add your constraints in the 
+			textbox, and click Add. To edit or remove a constraint, follow the pattern 
+			described in the Parameters use information.<br>
+			<br>
+			When you are satisfied with the data you have entered, you can click on the 
+			Build Procedure button. This will popup a new window from which you can copy or 
+			save the generated stored procedure. You always have the option of clicking on 
+			the Build Procedure button as long as you have specified the XML document you 
+			wish to parse.
+		</p>
+		<br>
+		<a name="#Development"></a>
+		<h2>Development</h2>
+		<p>Foam was developed by digital nothing design, because creating FOR XML EXPLICIT 
+			queries from the ground up is a major pain in the rear! Anyone who has 
+			attempted such knows that this is fact, and not even remotely close to opinion.
+			<ul>
+				<li>
+					Visit digital nothing design: <a href="http://www.digitalnothing.com/?foam">http://www.digitalnothing.com</a></li>
+				<li>
+					Email digital nothing design: <a href="mailto:foam@digitalnothing.com">foam@digitalnothing.com</a></li>
+				<li>
+					Download the latest version of Foam: <a href="http://www.digitalnothing.com/downloads/tools/foam.zip">
+						foam.zip</a></li>
+			</ul>
+		</p>
+		<br>
+		<a name="#Resources"></a>
+		<h2>Resources</h2>
+		<p>Below is a list of resources that you may find helpful while attempting to 
+			create FOR XML EXPLICIT stored procedures, or even your normal day to day SQL 
+			questions.</p>
+		<br>
+		<ul>
+			<li>
+				<a href="http://www.sqlteam.com">SQL Team</a> - Great articles, and forums with 
+				very helpful(read: extremly knowledgeable) regulars. Oh yeah, lots of Yak too!</li>
+			<li>
+				<a href="http://www.sqlxml.org">SQLXML</a> - Numerous FAQs dealing specifically 
+				with building, retrieving, and writing FOR XML queries.</li>
+			<li>
+				BOL(Books Online) - No link for this one. Just open up Query Analyzer and hit 
+				F1.</li>
+		</ul>
+		<br>
+		<p>Now that you are finished reading this little bit of documentation, go have some 
+			Foam with your SOAP! ...I'll stop now. Have fun using Foam, hopefully you'll 
+			find it as useful as I have.</p>
+	</BODY>
+</HTML>

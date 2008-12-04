@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Ads>
+	<Ad AdId="1" AdPosted="2001-12-19T22:08:45">
+		<Title>Test Ad</Title>
+		<AdBody>Test text, isn&apos;t it pretty?</AdBody>
+		<Phone></Phone>
+		<City></City>
+		<State>Other</State>
+		<Country></Country>
+	</Ad>
+	<Ad AdId="2" AdPosted="2001-12-19T22:11:42"><Title>It&apos;s so prett
+anonymous test for Reb</AdBody></Ad>
+	<Ad AdId="1011" AdPosted="2002-02-19T23:01:39">
+		<Title>Feb Anon Test</Title>
+		<AdBody>This is my anonymous test for Reb</AdBody>
+		<Images>
+			<Image ImageId="1" Path="../stuff.jpg" ImageName="1" />
+		</Images>
+	</Ad>
+</Ads>
